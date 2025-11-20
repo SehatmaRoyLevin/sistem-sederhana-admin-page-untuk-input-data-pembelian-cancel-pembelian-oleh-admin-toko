@@ -1,0 +1,14 @@
+<%- include('layout', { body: `
+  <h2>Input Pembelian</h2>
+  <form method='POST'>
+    <label>Produk:</label>
+    <select name='produk_id'>
+      ${produk.map(p => `<option value='${p.id}'>${p.nama}</option>`).join('')}
+    </select><br><br>
+
+    <label>Qty:</label>
+    <input type='number' name='qty' required><br><br>
+
+    <button type='submit'>Simpan</button>
+  </form>
+` }) %>
